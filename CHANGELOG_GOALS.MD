@@ -55,3 +55,22 @@ false: Dynamic segments not included in generateStaticParams will return a 404.-
 ustawia się to za pomocą 'export const dynamicParams = true' - i tyle
 
 ---
+
+MR 2 | 24.06.2023 - STRUKTURA APP
+
+1. Zastosowanie nowego feature Next.js jakim jest Server Actions (przykład zwykły i z transition)
+2. Dodanie parallel routes (strona o nazwie parallel)
+
+---
+
+NOTATKI:
+
+Server Actions jest aktualnie w fazie alpha i na ten moment raczej nie powinno być uzywane. Jest to feature, który pozwala na mutację po stronie serwera, redukuje kliencki kod Js'a
+oraz 'upraszcza' uzycie formularzy. Jest uzywie jest mozliwe zarowno w SSC jaki CSC.
+
+Parallel routes jest to feature, który umożliwia jednoczesne lub warunkowe renderowanie jednej lub więcej stron w tym samym układzie.
+
+- umożliwia zdefiniowanie niezależnych stanów błędów i ładowania dla każdej trasy, gdy są one przesyłane niezależnie,
+- umożliwia również warunkowe renderowanie slot'u na podstawie określonych warunków, takich jak stan uwierzytelnienia. Umożliwia to w pełni oddzielony kod w tym samym adresie URL
+
+Konwencja: Parallel routes są tworzone przy użyciu slotów. Sloty są definiowane w konwencji @folder i są przekazywane do układu tego samego poziomu co propsy.

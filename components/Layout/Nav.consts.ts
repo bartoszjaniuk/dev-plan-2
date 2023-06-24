@@ -4,6 +4,7 @@ export const AppPaths = {
   SSR: "/ssr",
   SSG: "/ssg",
   ISR: "/isr",
+  SERVER_ACTIONS: "/server-actions",
 } as const;
 
 export const AppRoutes = [
@@ -26,5 +27,9 @@ export const AppRoutes = [
   {
     name: "Isr",
     path: AppPaths.ISR,
+  },
+  {
+    name: "Server Actions",
+    path: AppPaths.SERVER_ACTIONS,
   },
 ];
