@@ -2,7 +2,7 @@ import React from "react";
 import AddButton from "./AddButton";
 import { revalidatePath } from "next/cache";
 
-export const todos: string[] = ["Learn server actions with transition"];
+const todos: string[] = ["Learn server actions with transition"];
 
 const Transition = () => {
   async function addTodo(todo: string) {
